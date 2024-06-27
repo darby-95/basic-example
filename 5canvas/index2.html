@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .canvas {background-color: #eee;}
+    </style>
+</head>
+<body>
+    <canvas class="canvas" width="600" height="400"></canvas>
+    <div class="imgWrap"></div>
+    
+
+    <script>
+        let canvas =document.querySelector('.canvas')
+        let context =canvas.getContext('2d')
+
+        let imgWrap =document.querySelector('.imgWrap')
+
+        // 태그 만들기
+
+        // p 태그 만들기
+        // let pEle=document.createElement("p")
+
+        // img 태그 만들기
+        // 1) let imgEle=document.createElement("img")
+        // 2) 
+        // <img src="이미지 주소" alt="설명글">
+        let imgEle=new Image();
+        imgEle.src="https://i.pinimg.com/736x/e1/1f/75/e11f75f9867b62a1e083f46306037d32.jpg";
+        imgEle.alt="배경";
+
+        // context.drawImage(imgEle,50,50)
+        // context.drawImage(imgEle,50,50,70,120)
+        context.drawImage(imgEle,100,100,200,200,0,0,100,100)
+        // 이미지내의 (0,0) 지점부터 공간 200,200 까지가 그려진다.
+        // 앞의 4개는 이미지 공간에 대한 정보, 뒤의 4개는 캔버스 공간에 대한 정보이다.
+        // context.drawImage(imgEle,이미지내에서 X위치,이미지내에서 Y위치,이미지내 X위치로부터 너비값,이미지내 Y위치로부터 너비값,캔버스 시작 위치 X,캔버스 시작 위치 Y,캔버스 시작 위치 X로부터의 너비값,캔버스 시작 위치 Y로부터의 높이값)
+
+
+    </script>
+</body>
+</html>

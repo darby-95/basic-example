@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main-slick {}
+.main-slick .slick-slide {overflow: hidden;}
+
+.main-slick .slick-slide img {right: 200%; position: relative; opacity: 0; transition: 0.5s; transition-delay: 1s;}
+.main-slick .slick-slide.slick-active img {right:0; opacity: 1;}
+
+.main-slick .slick-slide .text p:first-child {
+    position: relative;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    opacity: 0;
+    left: -100%;
+}
+
+.main-slick .slick-slide .text p:last-child {
+    position: relative;
+    transition: 0.5s;
+    transition-delay: 0.8s;
+    opacity: 0;
+    bottom: -200px;
+}
+
+.main-slick .slick-slide.slick-active {}
+
+.main-slick .slick-slide.slick-active .text p:first-child {opacity: 1; left: 0;}
+.main-slick .slick-slide.slick-active .text p:last-child { opacity: 1; bottom: 0;}
+
+.box {display: flex;}

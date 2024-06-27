@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- W3School input type -->
+    <!-- https://www.w3schools.com/tags/tag_input.asp -->
+    <div id="wrap">
+        <h2>사용자로부터 입력받기</h2>
+        <div class="첫째">
+            <form action="#"> <!-- # : 어디로 보낼것인가? -->
+                <label for="name">이름</label>
+                <!-- 위의 for 와 id 는 동일해야 연결된다. 🚀 무조건 id로 사용 -->
+                <!-- name : 무조건 임의로 적으면 안된다. 🚀 타고 들어가는 변수 이름이기 때문에 데이터 베이스를 만드는 사람(백엔드)에게 물어봐야한다. -->
+                <input type="text" id="name" name="my-name">
+                <br><br>
+                <label for="age">나이</label> 
+                <input type="number" id="age" name="my-age">
+                <br><br>
+                <button type="submit">제출</button>
+                <button type="reset">초기화</button>
+            </form>
+        </div> <!-- 첫째 -->
+        <div class="둘째">
+            <form action="#">
+                <fieldset> <!-- input, label 등 그룹으로 묶어줄 때 사용 -->
+                    <legend>반장</legend> <!-- 제목 역할 -->
+                    <label for="name1">이름</label>
+                    <input type="text" id="name1" name="my-name2">
+                    <br><br>
+                    <label for="age1">나이</label>
+                    <input type="number" id="age1" name="my-age2">
+                </fieldset>
+                <fieldset>
+                    <legend>부반장</legend> <!-- 제목 역할 -->
+                    <label for="name2">이름</label>
+                    <input type="text" id="name2" name="my-name3">
+                    <br><br>
+                    <label for="age2">나이</label>
+                    <input type="number" id="age2" name="my-age3">
+                </fieldset>
+            </form>
+        </div> <!-- 둘째 -->
+        <div class="셋째">
+            <form action="#">
+                <label for="txt">text</label>
+                <input type="text" id="txt" name="text" placeholder="5자 이하" maxlength="5">
+                <br><br>
+                <label for="src">search</label>
+                <input type="search" name="search" id="src">
+                <br><br>
+                <button type="submit">제출</button>
+            </form>
+        </div> <!-- 셋째 -->
+        <div class="넷째">
+            <label for="num">number</label>
+            <input type="number" id="num" name="num" min="0" max="10">
+
+            <label for="rg">range</label>
+            <input type="range" id="rg" name="range" min="0" max="100" step="10">
+
+            <label for="dt">date</label>
+            <input type="date" id="dt" name="date" min="2020-01-01" max="2025-12-31">
+
+            <form action="#"></form>
+            <label for="name3">이름 : </label>
+            <input type="text" id="name3" required> <!-- required : 필수 -->
+
+            <label for="part">웹반 : </label>
+            <input type="text" id="part" value="웹반" readonly> <!-- readonly : 읽기전용 -->
+
+            <button type="submit">버튼</button>
+        </div> <!-- 넷째 -->
+        <div class="다섯째">
+            <h3>메모</h3>
+            <label for="mg">메시지를 입력하세요.</label><br>
+            <textarea name="msg" id="mg" cols="100" rows="10"></textarea>
+        </div> <!-- 다섯째 -->
+        <div class="여섯째">
+            <h3>select,option 태그</h3>
+            <label for="lang">언어</label>
+            <select name="lang" id="lang">
+                <option value="">--언어--</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javaScript">javaScript</option>
+                <option value="React">React</option>
+            </select>
+
+            <h3>optgroup태그</h3>
+            <label for="shopping">쇼핑목록</label>
+            <select name="shop" id="shopping">
+                <optgroup label="과일">
+                    <option value="f_apl">사과</option>
+                    <option value="f_grp">포도</option>
+                    <option value="f_org">오렌지</option>
+                </optgroup>
+                <optgroup label="채소">
+                    <option value="v_crt">당근</option>
+                    <option value="v_tmt">토마토</option>
+                    <option value="v_ept">가지</option>
+                </optgroup>
+                <optgroup label="육류">
+                    <option value="m_bef">소고기</option>
+                    <option value="m_bef">돼지고기</option>
+                    <option value="m_bef">닭고기</option>
+                    
+                </optgroup>
+            </select>
+        </div> <!-- 여섯째 -->
+
+        <div class="일곱째">
+            <fieldset>
+                <legend>성별</legend> <!-- 둘중에 반드시 하나가 선택되어야 한다. -->
+                <input type="radio" name="gender" checked>남자 <!-- checked 기본 체크 -->
+                <input type="radio" name="gender">여자
+            </fieldset>
+            <fieldset>
+                <legend>지역선택</legend>
+                <input type="radio" name="area" checked>서울
+                <input type="radio" name="area">경기
+                <input type="radio" name="area">인천
+                <input type="radio" name="area">부산
+            </fieldset>
+            <fieldset>
+                <legend>좋아하는 과일을 모두 선택</legend> <!-- 중복 선택 가능한 체크 박스 -->
+                <input type="checkbox" name="fruit" checked>사과
+                <input type="checkbox" name="fruit">배
+                <input type="checkbox" name="fruit">토마토
+                <input type="checkbox" name="fruit">수박
+                <input type="checkbox" name="fruit">참외
+            </fieldset>
+        </div> <!-- 일곱째 -->
+    </div>
+</body>
+</html>

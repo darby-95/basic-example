@@ -1,0 +1,60 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+body {background-color: #222;}
+li {list-style: none;}
+
+/* one */
+.one {height: 200px;}
+.one ul {display: flex; gap: 10px; justify-content: center; align-items: center; height: 100%;}
+.one ul li a {display: block; width: 60px; height: 60px; background: url(./img/icon.png); background-position: 0 0;}
+
+/* background-position: X축 Y축; */
+.one ul li:nth-child(2) a{background-position: 0 -60px;}
+.one ul li:nth-child(3) a{background-position: 0 -120px;}
+.one ul li:nth-child(4) a{background-position: 0 -180px;}
+
+.one ul li:nth-child(1) a:hover{background-position: -60px 0px;}
+.one ul li:nth-child(2) a:hover{background-position: -60px -60px;}
+.one ul li:nth-child(3) a:hover{background-position: -60px -120px;}
+.one ul li:nth-child(4) a:hover{background-position: -60px -180px;}
+
+
+/* two */
+.two ul {height: 200px; display: flex; gap: 10px; justify-content: center; align-items: center;}
+
+.two ul li a {display: block; width: 60px; height: 60px; background: url(./img/icon.png); background-position: 0 -240px;}
+.two ul li:nth-child(2) a{background-position: 0 -300px;}
+.two ul li:nth-child(3) a{background-position: 0 -360px;}
+.two ul li:nth-child(4) a{background-position: 0 -420px;}
+.two ul li:nth-child(5) a{background-position: 0 -480px;}
+
+
+.two ul li:nth-child(1) a:hover{background-position: -60px -240px;}
+.two ul li:nth-child(2) a:hover{background-position: -60px -300px;}
+.two ul li:nth-child(3) a:hover{background-position: -60px -360px;}
+.two ul li:nth-child(4) a:hover{background-position: -60px -420px;}
+.two ul li:nth-child(5) a:hover{background-position: -60px -480px;}
+
+/* three */
+.three ul {height: 200px; display: flex; gap: 10px; justify-content: center; align-items: center;}
+
+.three ul li a {display: block; width: 60px; height: 60px; background: url(./img/icon.png); background-position: 0 -540px;}
+.three ul li:nth-child(2) a{background-position: 0 -600px;}
+.three ul li:nth-child(1) a:hover{background-position: -60px -540px;}
+.three ul li:nth-child(2) a:hover{background-position: -60px -600px;}
+
+/* four */
+.four ul {height: 200px; display: flex; gap: 10px; justify-content: center; align-items: center;}
+
+.four ul li a {display: block; width: 43px; height: 43px; background: url(./img/icon.png); background-position: -150px 0px;}
+.four ul li:nth-child(2) a{background-position: -150px -43px;}
+
+.four ul li:nth-child(1) a:hover{background-position: -193px -0px;}
+.four ul li:nth-child(2) a:hover{background-position: -193px -43px;}
+
+/* five */
+.five ul {height: 200px; display: flex; gap: 10px; justify-content: center; align-items: center;}
+
+.five ul li a {display: block; width: 17px; height: 17px; background: url(./img/icon.png); background-position: -150px -90px;}
+.five ul li:nth-child(1) a:hover{background-position: -167px -90px;}
+

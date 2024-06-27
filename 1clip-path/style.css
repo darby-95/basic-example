@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+/* 🚩 css 변수 만들기 
+
+
+규칙
+-- 를 변수명 앞에 붙인다.
+--변수명:변수에 넣은 내용;
+
+변수 사용하기
+color:var(--변수명)
+
+*/
+
+:root{ /* 변수 부여 */
+    --main-bg-color:#222;
+    --main-div-color:#131313;
+    --width:95%;
+    --max-width:1600px;
+    --border-radius:20px;
+}
+
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+li{list-style: none;}
+a{text-decoration: none; color: #fff;}
+
+
+body{
+    background-color: var(--main-bg-color);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+h1{
+    font-size:clamp(32px,7vw,72px);
+        /* ❗❗ font-size: clamp(최소값,기본값,최대값); ❗❗ 화면의 사이즈에따라 폰트 사이즈가 변한다.
+    font-size: 7vw; 화면의 너비에따라 7% 사이즈의 폰트 사이즈를 가진다. */
+}
+
+/* html{font-size: 30px;} */
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;  /* 16px --> 1rem  */
+}
+#hero{
+   display: flex; 
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+.container{
+    width: var(--width);
+    max-width: var(--max-width);
+    padding: 2rem; /* 30 */
+
+
+    background-color: var(--main-div-color);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+    
+}
+.nav_container{display: flex;
+justify-content: flex-end;
+}
+.nav_container nav{width: 450px; }
+.nav_container nav ul{display: flex;
+justify-content: space-between;
+}
+.nav_container nav ul li{}
+.nav_container nav ul li a{}
+
+
+.hero_text{margin-bottom: -100px;}
+.hero_text .sub_header{display: flex; align-items: center; gap: 0.5rem;}
+.sub_header .circle{
+    width: 0.5rem; height: 0.5rem; 
+    background-color: #d6a3e4; 
+    border-radius: 50%;
+}
+.sub_header h4{font-weight: bold;}
+
+.hero_header {width: 80%; margin-bottom: 1rem;}
+.hero_intro {width: 40%; opacity: 0.8;}
+
+
+
+.carousel {overflow: hidden; position: relative;}
+.carousel .left_carousel {
+    background: linear-gradient(90deg, var(--main-div-color), transparent);
+    width: 30%; height: 100%;
+    position: absolute; top: 0; left: 0;
+    z-index: 10;
+}
+
+.carousel .right_carousel {
+    background: linear-gradient(270deg, var(--main-div-color), transparent); 
+    /* 반전을 해야하기 때문에 left_carousel 의 90도+180도 = 270도 */
+    width: 30%; height: 100%;
+    position: absolute; top: 0; right: 0;
+    z-index: 10;
+}
+
+.carousel .carousel_inner {
+    display: flex; 
+    width: 200%;
+    animation: marque 10s linear infinite ;
+}
+.carousel .carousel_inner:hover {animation-play-state: paused;}
+/* 애니메이션에 마우스를 올렸을때(hover) 멈춘다.(paused) */
+
+.carousel .carousel_inner .item {
+    width: 0;
+    display: flex; 
+    flex-grow: 1;
+    justify-content: center; 
+    align-items: center;
+}
+.carousel .carousel_inner .item img {width: 60%;}
+
+@keyframes marque {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-50%);}
+}
+
+
+/* bottom_div */
+
+.bottom_div{
+    width: var(--width);
+    max-width: var(--max-width);
+    padding-top: 30px;
+    position: relative;
+}
+
+.bottom_div .left {position: absolute; top: 0; left: 0;     width: 50%; height: 100%;}
+.bottom_div .left .curve {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; 
+    background-color: var(--main-bg-color);
+    border-top-right-radius: var(--border-radius);
+    z-index: 5;
+}
+.bottom_div .left .cover {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; 
+    background-color: var(--main-div-color);
+}
+
+.bottom_div .right {
+    position: absolute; width: 50%;
+    top: 0; left: 50%;
+    background-color: var(--main-div-color);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    padding: 1rem;
+}
+.bottom_div .right .services {
+    width: 100%; 
+    padding: 1rem; 
+    text-align: center; 
+    background-color: var(--main-bg-color);
+    border-radius: calc(var(--border-radius) - 1rem);
+}
+.bottom_div .right .services h5 {}
+
+/* about */
+#about {}
